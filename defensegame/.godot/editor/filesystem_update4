@@ -1,0 +1,5 @@
+res://Scene/Menu.tscn
+res://Scene/Game.tscn
+res://Scene/Enemy_bear.tscn
+res://Scene/Bullet.tscn
+res://Script/enemy_bear.gd
