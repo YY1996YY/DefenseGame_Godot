@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c6x1y4oqb3pnv"]
+[gd_scene load_steps=13 format=3 uid="uid://c6x1y4oqb3pnv"]
 
 [ext_resource type="Texture2D" uid="uid://w1shnpbolc31" path="res://Asset/back.png" id="1_6igcf"]
 [ext_resource type="Script" uid="uid://bu4r06bno37sa" path="res://Script/game.gd" id="1_ivtx6"]
@@ -8,10 +8,17 @@
 [ext_resource type="Script" uid="uid://b2un4a7y21u0u" path="res://Script/gun.gd" id="5_3xgnh"]
 [ext_resource type="Texture2D" uid="uid://boi6em4kuug3y" path="res://Asset/Turret5Top.png" id="5_48ymf"]
 [ext_resource type="PackedScene" uid="uid://dws71oq0cl7wa" path="res://Scene/Bullet.tscn" id="6_48ymf"]
+[ext_resource type="Texture2D" uid="uid://cg0wofuac1gf5" path="res://Asset/healthbarUnder.png" id="9_2j816"]
+[ext_resource type="Texture2D" uid="uid://cn0jpdjmuj7p8" path="res://Asset/healthbarProgress.png" id="10_g3fkh"]
+[ext_resource type="Texture2D" uid="uid://db0hmrocdgl8g" path="res://Asset/142.png" id="11_g3fkh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cohtu"]
+size = Vector2(190, 314)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_ivtx6")
 BearScene = ExtResource("2_cohtu")
+playerHP = 100
 
 [node name="Back" type="Sprite2D" parent="."]
 position = Vector2(962, 347)
@@ -21,6 +28,12 @@ texture = ExtResource("1_6igcf")
 [node name="Oyasiro" type="Sprite2D" parent="."]
 position = Vector2(50, 565)
 texture = ExtResource("2_u6khg")
+
+[node name="Area2D" type="Area2D" parent="Oyasiro" groups=["Oyasiro"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Oyasiro/Area2D" groups=["Oyasiro"]]
+position = Vector2(12, 26)
+shape = SubResource("RectangleShape2D_cohtu")
 
 [node name="Turret5Base" type="Sprite2D" parent="."]
 position = Vector2(105, 739)
@@ -34,6 +47,7 @@ script = ExtResource("5_3xgnh")
 bulletScene = ExtResource("6_48ymf")
 
 [node name="Turret5Top" type="Sprite2D" parent="Gun"]
+z_index = 500
 position = Vector2(87.375, -19.9999)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("5_48ymf")
@@ -50,6 +64,20 @@ position = Vector2(189.285, -43.415)
 
 [node name="BearTimer" type="Timer" parent="."]
 autostart = true
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+offset_left = 14.0
+offset_top = 403.0
+offset_right = 78.0
+offset_bottom = 443.0
+scale = Vector2(3.28817, 2.26014)
+texture_under = ExtResource("9_2j816")
+texture_progress = ExtResource("10_g3fkh")
+
+[node name="Cursor" type="Sprite2D" parent="."]
+z_index = 1000
+scale = Vector2(2, 2)
+texture = ExtResource("11_g3fkh")
 
 [connection signal="timeout" from="Gun/ShootTimer" to="Gun" method="_on_shoot_timer_timeout"]
 [connection signal="timeout" from="BearTimer" to="." method="_on_bear_timer_timeout"]

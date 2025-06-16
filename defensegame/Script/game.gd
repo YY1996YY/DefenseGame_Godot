@@ -2,7 +2,7 @@ extends Node2D
 var mousePos : Vector2
 var gunRotateAng : float
 @export var BearScene : PackedScene
-
+@export var playerHP : int
 enum status{
 	shooting
 	
@@ -10,17 +10,21 @@ enum status{
 }
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
+	
 	mousePos = get_viewport().get_mouse_position()
+	$Cursor.position = mousePos
 	gunRotateAng = GetGunRotateAng()
 	print(gunRotateAng)
 	$Gun.rotation=gunRotateAng
 	
-	
+	$TextureProgressBar.value = playerHP
 
 
 
@@ -44,3 +48,9 @@ func BearGenerate()->void:
 
 func _on_bear_timer_timeout() -> void:
 	BearGenerate()
+	
+func take_damage(dmg:int)->void:
+	if playerHP > dmg:
+		playerHP -= dmg
+	else:
+		playerHP = 0

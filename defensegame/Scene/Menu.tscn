@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://85dh4e4do8dg"]
+[gd_scene load_steps=4 format=3 uid="uid://85dh4e4do8dg"]
 
 [ext_resource type="Script" uid="uid://bnb68ux1m0q3n" path="res://Script/menu.gd" id="1_mcucm"]
 [ext_resource type="Texture2D" uid="uid://c0e7jlyji8e6v" path="res://Asset/titleback.png" id="2_ldxh0"]
+[ext_resource type="Texture2D" uid="uid://dlinxo1fkbbst" path="res://Asset/title.png" id="3_ldxh0"]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(-19, 22)
@@ -10,3 +11,8 @@ script = ExtResource("1_mcucm")
 [node name="Titleback" type="Sprite2D" parent="."]
 position = Vector2(962, 583)
 texture = ExtResource("2_ldxh0")
+
+[node name="Title" type="Sprite2D" parent="."]
+position = Vector2(989, 354)
+scale = Vector2(2, 2)
+texture = ExtResource("3_ldxh0")

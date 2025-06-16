@@ -69,16 +69,17 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fu0nb"]
 
-[node name="EnemyBear" type="Area2D" groups=["Enemy"]]
+[node name="EnemyBear" type="Area2D" node_paths=PackedStringArray("animator") groups=["Enemy"]]
+y_sort_enabled = true
 script = ExtResource("1_0we1v")
 hp = 100
 hp_max = 100
+animator = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_qsgmb")
-animation = &"run"
+animation = &"attack"
 autoplay = "run"
-frame_progress = 0.719051
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Enemy"]]
 scale = Vector2(5.565, 6.88)
@@ -98,3 +99,9 @@ offset_right = 33.0
 offset_bottom = -83.0
 texture_under = ExtResource("3_0h1ha")
 texture_progress = ExtResource("4_w460h")
+
+[node name="atkTimer" type="Timer" parent="."]
+wait_time = 0.25
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="timeout" from="atkTimer" to="." method="_on_atk_timer_timeout"]
