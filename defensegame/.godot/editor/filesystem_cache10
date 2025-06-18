@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1749716997
+::res://::1750246254
 icon.svg::CompressedTexture2D/CompressedTexture2D::4298080322953429713::1749057384::1749057390::1::::<><><>0<>0<>ebcf7e3bb37e6d777ceebfc0022e9489<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://Asset/::1749717005
 1_100x100px.png::CompressedTexture2D/CompressedTexture2D::4811036382225903466::1749710412::1749710412::1::::<><><>0<>0<>7ea42a495d3892f15589641909399032<>res://.godot/imported/1_100x100px.png-784f16edd258f7e479cbb3bbc7bce328.ctex::
@@ -11,7 +11,7 @@ healthbarUnder.png::CompressedTexture2D/CompressedTexture2D::5246944941537962320
 kuma.png::CompressedTexture2D/CompressedTexture2D::9082734349253195248::1749102795::1749102796::1::::<><><>0<>0<>d3a3e28b201a779d590a8b73ad5281be<>res://.godot/imported/kuma.png-f88839d1033a86ae3b40fdc9a790ef9d.ctex::
 oyasiro.png::CompressedTexture2D/CompressedTexture2D::8974531998141997857::1749061782::1749061783::1::::<><><>0<>0<>08b72d5994d2d045f1a1a4e6d0e1aeb6<>res://.godot/imported/oyasiro.png-93a32d33c9df8e98b16518d3cfc829eb.ctex::
 start.png::CompressedTexture2D/CompressedTexture2D::7276314627621193452::1749103223::1749103223::1::::<><><>0<>0<>54454a1428c2f70d17fb0785925c8193<>res://.godot/imported/start.png-fb2ceb141eef8c1a99cbd5cee591d13a.ctex::
-title.png::CompressedTexture2D::7948685523028312643::1749717005::1749717005::1::::<><><>0<>0<>506214e5be6230470951dae767c11332<>res://.godot/imported/title.png-1c55b38955aa6c2813d9f02c60e43945.ctex::
+title.png::CompressedTexture2D/CompressedTexture2D::7948685523028312643::1749717005::1749717005::1::::<><><>0<>0<>506214e5be6230470951dae767c11332<>res://.godot/imported/title.png-1c55b38955aa6c2813d9f02c60e43945.ctex::
 titleback.png::CompressedTexture2D/CompressedTexture2D::6537779600519991531::1749057731::1749057732::1::::<><><>0<>0<>a323f1de4218961ee5179f02c1b42616<>res://.godot/imported/titleback.png-841175994347af6b601400fdc4bd5bb5.ctex::
 Turret5Base.png::CompressedTexture2D/CompressedTexture2D::2154712731306841199::1749098619::1749098619::1::::<><><>0<>0<>eacc12128b946622c215a34393ecdf83<>res://.godot/imported/Turret5Base.png-86148f41cfbc8a6702f9b7a9c201afc4.ctex::
 Turret5Top.png::CompressedTexture2D/CompressedTexture2D::3387469562170817352::1749098619::1749098619::1::::<><><>0<>0<>7bbffef7233e79be2680011c93d35565<>res://.godot/imported/Turret5Top.png-2b93a04ec696de8272db7486216a6be2.ctex::
@@ -82,14 +82,14 @@ Turret5Top.png::CompressedTexture2D/CompressedTexture2D::3387469562170817352::17
 64.png::CompressedTexture2D/CompressedTexture2D::5291663880507972488::1749105285::1749105285::1::::<><><>0<>0<>bbbcfcf745dbc3bc9d779d70ca056faa<>res://.godot/imported/64.png-8e5abf9193626ded8790e2fc70f9ea9d.ctex::
 65.png::CompressedTexture2D/CompressedTexture2D::4859067699129341990::1749105285::1749105285::1::::<><><>0<>0<>5c57170f697497af4598c80d0e58ec64<>res://.godot/imported/65.png-de97d0fca03c34c6c80e60b0b14fd2be.ctex::
 66.png::CompressedTexture2D/CompressedTexture2D::7071808456116947802::1749105285::1749105285::1::::<><><>0<>0<>ac5a108ed0194c478fb310cd594057b0<>res://.godot/imported/66.png-8879356fdc25883d147e5d843e3c7a71.ctex::
-::res://Scene/::1749716722
-Bullet.tscn::PackedScene::8742565546281946756::1749716313::0::1::::<><><>0<>0<><>::uid://b3ic4biv263om::::res://Script/bullet.gd<>uid://c45ocv2xd17w1::::res://Asset/Laser Sprites/19.png<>uid://casrciwn351ja::::res://Asset/1_100x100px.png
-Enemy_bear.tscn::PackedScene::3569361929148291020::1749716313::0::1::::<><><>0<>0<><>::uid://dobla0a2rypd1::::res://Script/enemy_bear.gd<>uid://d2n0kpy7e5maq::::res://Asset/kuma.png<>uid://cg0wofuac1gf5::::res://Asset/healthbarUnder.png<>uid://cn0jpdjmuj7p8::::res://Asset/healthbarProgress.png
-Game.tscn::PackedScene::6997799254908063867::1749716722::0::1::::<><><>0<>0<><>::uid://w1shnpbolc31::::res://Asset/back.png<>uid://bu4r06bno37sa::::res://Script/game.gd<>uid://bq4a4tefehyrs::::res://Scene/Enemy_bear.tscn<>uid://d04lh32541vi4::::res://Asset/oyasiro.png<>uid://5x02ljt8lerv::::res://Asset/Turret5Base.png<>uid://b2un4a7y21u0u::::res://Script/gun.gd<>uid://boi6em4kuug3y::::res://Asset/Turret5Top.png<>uid://dws71oq0cl7wa::::res://Scene/Bullet.tscn<>uid://cg0wofuac1gf5::::res://Asset/healthbarUnder.png<>uid://cn0jpdjmuj7p8::::res://Asset/healthbarProgress.png<>uid://db0hmrocdgl8g::::res://Asset/142.png
-Menu.tscn::PackedScene::2378359354891092272::1749716357::0::1::::<><><>0<>0<><>::uid://bnb68ux1m0q3n::::res://Script/menu.gd<>uid://c0e7jlyji8e6v::::res://Asset/titleback.png
+::res://Scene/::1750080452
+Bullet.tscn::PackedScene::8742565546281946756::1750080452::0::1::::<><><>0<>0<><>::uid://b3ic4biv263om::::res://Script/bullet.gd<>uid://c45ocv2xd17w1::::res://Asset/Laser Sprites/19.png<>uid://casrciwn351ja::::res://Asset/1_100x100px.png
+Enemy_bear.tscn::PackedScene::3569361929148291020::1750080452::0::1::::<><><>0<>0<><>::uid://dobla0a2rypd1::::res://Script/enemy_bear.gd<>uid://d2n0kpy7e5maq::::res://Asset/kuma.png<>uid://cg0wofuac1gf5::::res://Asset/healthbarUnder.png<>uid://cn0jpdjmuj7p8::::res://Asset/healthbarProgress.png
+Game.tscn::PackedScene::6997799254908063867::1750080452::0::1::::<><><>0<>0<><>::uid://w1shnpbolc31::::res://Asset/back.png<>uid://bu4r06bno37sa::::res://Script/game.gd<>uid://bq4a4tefehyrs::::res://Scene/Enemy_bear.tscn<>uid://d04lh32541vi4::::res://Asset/oyasiro.png<>uid://5x02ljt8lerv::::res://Asset/Turret5Base.png<>uid://b2un4a7y21u0u::::res://Script/gun.gd<>uid://boi6em4kuug3y::::res://Asset/Turret5Top.png<>uid://dws71oq0cl7wa::::res://Scene/Bullet.tscn<>uid://cg0wofuac1gf5::::res://Asset/healthbarUnder.png<>uid://cn0jpdjmuj7p8::::res://Asset/healthbarProgress.png<>uid://db0hmrocdgl8g::::res://Asset/142.png
+Menu.tscn::PackedScene::2378359354891092272::1750080452::0::1::::<><><>0<>0<><>::uid://bnb68ux1m0q3n::::res://Script/menu.gd<>uid://c0e7jlyji8e6v::::res://Asset/titleback.png<>uid://dlinxo1fkbbst::::res://Asset/title.png
 ::res://Script/::1749715843
 bullet.gd::GDScript/GDScript::4368396615472522656::1749711824::0::1::::<>Area2D<><>0<>0<><>::
 enemy_bear.gd::GDScript/GDScript::8144639441020435948::1749710041::0::1::::<>Area2D<><>0<>0<><>::
-game.gd::GDScript::3851142975425300740::1749715843::0::1::::<>Node2D<><>0<>0<><>::
+game.gd::GDScript/GDScript::3851142975425300740::1749715843::0::1::::<>Node2D<><>0<>0<><>::
 gun.gd::GDScript/GDScript::4323648176491695414::1749108415::0::1::::<>Node2D<><>0<>0<><>::
 menu.gd::GDScript/GDScript::3302882273912067341::1749057922::0::1::::<>Node2D<><>0<>0<><>::

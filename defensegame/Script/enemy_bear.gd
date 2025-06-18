@@ -2,6 +2,7 @@ extends Area2D
 @export var hp : int
 @export var hp_max : int
 @export var animator : AnimatedSprite2D
+@export var animator_shadow : AnimatedSprite2D
 
 enum Status{
 	BlockByWall,
@@ -32,6 +33,7 @@ func _process(delta: float) -> void:
 	
 	if status==Status.attack:
 		animator.play("attack")
+		animator_shadow.play("shadow_attack")
 		if $atkTimer.is_stopped():
 			$atkTimer.start()
 		

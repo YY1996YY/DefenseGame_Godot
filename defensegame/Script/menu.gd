@@ -3,6 +3,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	get_window().title = "2025年度＿制作実習＿防衛シューティングゲーム＿「楊屹凡」"
 	pass # Replace with function body.
 
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bq4a4tefehyrs"]
+[gd_scene load_steps=22 format=3 uid="uid://bq4a4tefehyrs"]
 
 [ext_resource type="Script" uid="uid://dobla0a2rypd1" path="res://Script/enemy_bear.gd" id="1_0we1v"]
 [ext_resource type="Texture2D" uid="uid://d2n0kpy7e5maq" path="res://Asset/kuma.png" id="1_plbkq"]
@@ -69,16 +69,80 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fu0nb"]
 
-[node name="EnemyBear" type="Area2D" node_paths=PackedStringArray("animator") groups=["Enemy"]]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qsgmb"]
+atlas = ExtResource("1_plbkq")
+region = Rect2(0, 224, 224, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fu0nb"]
+atlas = ExtResource("1_plbkq")
+region = Rect2(224, 224, 224, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jvw3w"]
+atlas = ExtResource("1_plbkq")
+region = Rect2(448, 224, 224, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xij1a"]
+atlas = ExtResource("1_plbkq")
+region = Rect2(0, 0, 224, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7mxr"]
+atlas = ExtResource("1_plbkq")
+region = Rect2(224, 0, 224, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wub7f"]
+atlas = ExtResource("1_plbkq")
+region = Rect2(448, 0, 224, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xxi2d"]
+atlas = ExtResource("1_plbkq")
+region = Rect2(672, 0, 224, 224)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xk8lh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qsgmb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fu0nb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jvw3w")
+}],
+"loop": true,
+"name": &"shadow_attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xij1a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7mxr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wub7f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xxi2d")
+}],
+"loop": true,
+"name": &"shadow_run",
+"speed": 5.0
+}]
+
+[node name="EnemyBear" type="Area2D" node_paths=PackedStringArray("animator", "animator_shadow") groups=["Enemy"]]
 y_sort_enabled = true
 script = ExtResource("1_0we1v")
 hp = 100
 hp_max = 100
 animator = NodePath("AnimatedSprite2D")
+animator_shadow = NodePath("AnimatedSprite2Dshadow")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 100
 sprite_frames = SubResource("SpriteFrames_qsgmb")
-animation = &"attack"
+animation = &"run"
 autoplay = "run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Enemy"]]
@@ -102,6 +166,15 @@ texture_progress = ExtResource("4_w460h")
 
 [node name="atkTimer" type="Timer" parent="."]
 wait_time = 0.25
+
+[node name="AnimatedSprite2Dshadow" type="AnimatedSprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.278431)
+z_index = 99
+position = Vector2(0, 222)
+sprite_frames = SubResource("SpriteFrames_xk8lh")
+animation = &"shadow_run"
+autoplay = "shadow_run"
+flip_v = true
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="timeout" from="atkTimer" to="." method="_on_atk_timer_timeout"]

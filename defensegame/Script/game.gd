@@ -23,6 +23,7 @@ func _physics_process(delta: float) -> void:
 	gunRotateAng = GetGunRotateAng()
 	print(gunRotateAng)
 	$Gun.rotation=gunRotateAng
+	$GunShadow.rotation=-gunRotateAng
 	
 	$TextureProgressBar.value = playerHP
 

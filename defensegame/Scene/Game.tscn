@@ -35,6 +35,12 @@ texture = ExtResource("2_u6khg")
 position = Vector2(12, 26)
 shape = SubResource("RectangleShape2D_cohtu")
 
+[node name="OyasiroShadow" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.219608)
+position = Vector2(50, 981)
+texture = ExtResource("2_u6khg")
+flip_v = true
+
 [node name="Turret5Base" type="Sprite2D" parent="."]
 position = Vector2(105, 739)
 scale = Vector2(0.5, 0.5)
@@ -61,6 +67,32 @@ wait_time = 0.008
 
 [node name="ShootPoint" type="Node2D" parent="Gun"]
 position = Vector2(189.285, -43.415)
+
+[node name="Turret5BaseShadow" type="Sprite2D" parent="."]
+self_modulate = Color(0, 0, 0, 0.203922)
+z_index = 99
+position = Vector2(105, 848)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_3xgnh")
+flip_h = true
+flip_v = true
+
+[node name="GunShadow" type="Node2D" parent="."]
+modulate = Color(1, 1, 1, 0.176471)
+z_index = 99
+position = Vector2(67, 917)
+scale = Vector2(1, -1)
+
+[node name="Turret5Top" type="Sprite2D" parent="GunShadow"]
+self_modulate = Color(0, 0, 0, 1)
+z_index = 500
+position = Vector2(87.375, -19.9999)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_48ymf")
+flip_h = true
+
+[node name="GunAx" type="Node2D" parent="GunShadow"]
+position = Vector2(0, -43.415)
 
 [node name="BearTimer" type="Timer" parent="."]
 autostart = true
